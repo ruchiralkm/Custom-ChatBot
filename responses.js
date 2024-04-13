@@ -37,5 +37,16 @@ function getBotResponse(input) {
       userName +
       ", Welcome to the Brew Cafe<br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffee<br><br>3.Pizza"
     );
+  } else if (input.toLowerCase().includes("burgers")) {
+    return (
+      "<img src='asset/b_banner.jpg' alt='' width='426' height='240'<br><br>Dear " +
+      userName +
+      ", We have various kinds of burgers. If you want to know more details, please mention the each burger name.<br><br>1.Cheese Burger<br><br>2.Crispy Chicken Burger<br><br>3.Vegetable Burger<br><br>4.Hamburger<br><br>5.Sandwich Burger"
+    );
+  } else if (input.toLowerCase().includes("cheese burger")) {
+    return (
+      "<img src='burgers/cb.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Cheese Burger.<br><br>Ingredients👉<br>⚫ Cheese Layer 2x<br>⚫ Fish Patties 1x<br>⚫ Tomato Slices 2x<br>⚫ Onion<br>⚫ Lettuce Leaves<br><br>Total Price = LKR.950.00"
+    );
   }
 }
