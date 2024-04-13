@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Bot</title>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="bot.css" />
+    <link rel="stylesheet" href="styl.css" />
+
+    <!-- icons link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!----------Bg Image------->
+    <div class="bgImage">
+      <div class="overlay"></div>
+      <div class="cnt">
+        <h1>Welcome to the <span>Brew Cafe</span></h1>
+        <p>
+          Welcome to our cozy café! Enjoy our delicious, juicy burgers made from
+          fresh ingredients and cooked to perfect. Pair it with our tasty,
+          smoothly brewed coffee. Don't forget to try our other delicious food
+          and drink options, all made with love and care. Come have a delightful
+          experience with us!
+        </p>
+        <button>Explore</button>
+      </div>
+    </div>
+
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+      <button id="chat-button" type="button" class="collapsible">
+        <center>
+          AI ChatBot (beta)
+          <i
+            id="chat-icon"
+            style="color: #fff"
+            class="fa fa-fw fa-comments-o"
+          ></i>
+        </center>
+      </button>
+
+      <div class="content">
+        <div class="full-chat-block">
+          <!-- Message Container -->
+          <div class="outer-container">
+            <div class="chat-container">
+              <!-- Messages -->
+              <div id="chatbox">
+                <h5 id="chat-timestamp"></h5>
+                <p id="botStarterMessage" class="botText">
+                  <span>Loading...</span>
+                </p>
+              </div>
+
+              <!-- User input box -->
+              <div class="chat-bar-input-block">
+                <div id="userInput">
+                  <input
+                    id="textInput"
+                    class="input-box"
+                    type="text"
+                    name="msg"
+                    placeholder="Enter Your Message"
+                  />
+                  <p></p>
+                </div>
+
+                <div class="chat-bar-icons">
+                  <!-- refresh button -->
+                  <i
+                    id="clear"
+                    style="color: rgb(1, 35, 122); cursor: pointer"
+                    class="fa fa-refresh"
+                  ></i>
+
+                  <script>
+                    document
+                      .getElementById("clear")
+                      .addEventListener("click", function () {
+                        // Reload the page
+                        window.location.reload();
+                      });
+                  </script>
+
+                  <!-- heart button -->
+                  <i
+                    id="chat-icon"
+                    style="color: crimson; cursor: pointer"
+                    class="fa fa-fw fa-heart"
+                    onclick="heartButton()"
+                  ></i>
+
+                  <!-- send button -->
+                  <i
+                    id="chat-icon"
+                    style="color: #333; cursor: pointer"
+                    class="fa fa-fw fa-send"
+                    onclick="sendButton()"
+                  ></i>
+                </div>
+              </div>
+
+              <div id="chat-bar-bottom">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="responses.js"></script>
+  <script src="chat.js"></script>
+</html>
