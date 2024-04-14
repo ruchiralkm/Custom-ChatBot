@@ -188,7 +188,7 @@ function getBotResponse(input) {
     // -----------------Six Cups-------------------
   } else if (input.toLowerCase().includes("six cups")) {
     return (
-      "<img src='desserts/st_des.jpg' alt='' width='300' height='300'<br><br>" +
+      "<img src='desserts/six_des.jpg' alt='' width='300' height='300'<br><br>" +
       "Here, This is our Six Cups Dessert.<br><br>Ingredients👉<br>⚫ Strawberry ice cream<br>⚫ Fruit & Nut ice cream<br>⚫ Caramel + Sweets<br><br>Total Price = LKR.750.00"
     );
   }
