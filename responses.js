@@ -35,7 +35,7 @@ function getBotResponse(input) {
     return (
       "<img src='asset/mglogo.jpg' alt='' width='250' height='250'<br><br>Hello " +
       userName +
-      ", Welcome to the Brew Cafe<br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza"
+      ", Welcome to the Brew Cafe<br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza<br><br>4.Desserts"
     );
 
     // -----------------burgers-------------------//
@@ -152,6 +152,44 @@ function getBotResponse(input) {
     return (
       "<img src='pizzas/h_pizza.jpg' alt='' width='300' height='300'<br><br>" +
       "Here, This is our Hot & Spicy pizza.<br><br>Ingredients👉<br>⚫ Ketchup Layer<br>⚫ Spicy chunks of chicken<br>⚫ Capsicums and Onions<br>⚫ Mozzarella Cheese layers 2x.<br><br>Total Price = LKR.1950.00"
+    );
+  } //-------------------Desserts------------------------//
+  //-------------------Menu--------------------------//
+  else if (input.toLowerCase().includes("dessert")) {
+    return (
+      "<img src='asset/d_banner.jpg' alt='' width='426' height='240'<br><br>Dear " +
+      userName +
+      ", We have various kinds of desserts. If you want to know more details, please mention the each desserts name.<br><br>1.Chocolate Lava<br><br>2.Choco Cup<br><br>3.Bliss Berry<br><br>4.Strawberry Mousse<br><br>5.Six Cups"
+    );
+    // -----------------chocolate lava-------------------
+  } else if (input.toLowerCase().includes("chocolate lava")) {
+    return (
+      "<img src='desserts/cl_des.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Chocolate Lava Dessert.<br><br>Ingredients👉<br>⚫ Chocolate.<br>⚫ Cocoa powder<br>⚫ Eggs<br>⚫ Butter<br><br>Total Price = LKR.450.00"
+    );
+    // -----------------Choco Berry-------------------
+  } else if (input.toLowerCase().includes("choco cup")) {
+    return (
+      "<img src='desserts/cc_des.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Choco Cup Dessert.<br><br>Ingredients👉<br>⚫ Chocolate cake<br>⚫ Chocolate cream<br>⚫ Whipped cream<br>⚫ Cherry<br><br>Total Price = LKR.350.00"
+    );
+    // -----------------Bliss Berry-------------------
+  } else if (input.toLowerCase().includes("bliss berry")) {
+    return (
+      "<img src='desserts/bl_des.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Bliss Berry Dessert.<br><br>Ingredients👉<br>⚫ Strawberry ice cream<br>⚫ Chocolate ice cream<br>⚫ Fruit & Nut ice cream<br>⚫ Strawberry and Grapes<br><br>Total Price = LKR.850.00"
+    );
+    // -----------------Strawberry Mousse-------------------
+  } else if (input.toLowerCase().includes("strawberry mousse")) {
+    return (
+      "<img src='desserts/st_des.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Strawberry Mousse Dessert.<br><br>Ingredients👉<br>⚫ Strawberry cream<br>⚫ Vanila cream<br>⚫ Fruit & Nut<br>⚫ Strawberry and Grapes<br><br>Total Price = LKR.550.00"
+    );
+    // -----------------Six Cups-------------------
+  } else if (input.toLowerCase().includes("six cups")) {
+    return (
+      "<img src='desserts/st_des.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Six Cups Dessert.<br><br>Ingredients👉<br>⚫ Strawberry ice cream<br>⚫ Fruit & Nut ice cream<br>⚫ Caramel + Sweets<br><br>Total Price = LKR.750.00"
     );
   }
 }
