@@ -40,7 +40,7 @@ function getBotResponse(input) {
 
     // -----------------burgers-------------------//
     // -----------------Menu-------------------//
-  } else if (input.toLowerCase().includes("burger")) {
+  } else if (input.toLowerCase().includes("burgers")) {
     return (
       "<img src='asset/b_banner.jpg' alt='' width='426' height='240'<br><br>Dear " +
       userName +
@@ -114,6 +114,40 @@ function getBotResponse(input) {
     return (
       "<img src='coffees/i_coffee.jpg' alt='' width='300' height='300'<br><br>" +
       "Here, This is our Iced Coffee.<br><br>Ingredients👉<br>⚫ Chilled coffee<br>⚫ Chocolate milk<br>⚫ Ice cubes<br><br>Total Price = LKR.300.00"
+    );
+  } //-------------------Pizza------------------------//
+  //-------------------Menu--------------------------//
+  else if (input.toLowerCase().includes("pizza")) {
+    return (
+      "<img src='asset/p_banner.jpg' alt='' width='426' height='240'<br><br>Dear " +
+      userName +
+      ", We have various kinds of pizzas. If you want to know more details, please mention the each pizza name.<br><br>1.Cheese Lover<br><br>2.Sausage Delight<br><br>3.Double Chicken<br><br>4.Spicy Veggie<br><br>5.Hot & Spicy"
+    );
+    // -----------------cheese-------------------
+  } else if (input.toLowerCase().includes("cheese lover")) {
+    return (
+      "<img src='pizzas/c_pizza.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Cheese Lover pizza.<br><br>Ingredients👉<br>⚫ Ketchup Layer<br>⚫ Mozzarella Cheese layers 3x<br><br>Total Price = LKR.1650.00"
+    );
+  } else if (input.toLowerCase().includes("sausage delight")) {
+    return (
+      "<img src='pizzas/s_pizza.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Sausage Delight pizza.<br><br>Ingredients👉<br>⚫ Ketchup Layer<br>⚫ Chicken sausages<br>⚫ Onions<br>⚫ Mozzarella Cheese layers 2x.<br><br>Total Price = LKR.1850.00"
+    );
+  } else if (input.toLowerCase().includes("double chicken")) {
+    return (
+      "<img src='pizzas/d_pizza.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Double Chicken pizza.<br><br>Ingredients👉<br>⚫ Ketchup Layer<br>⚫ Spicy chicken<br>⚫ Succulent chicken sausages<br>⚫ Crunchy onions and capsicum<br>⚫ Mozzarella Cheese layers 1x<br><br>Total Price = LKR.1930.00"
+    );
+  } else if (input.toLowerCase().includes("spicy veggie")) {
+    return (
+      "<img src='pizzas/sv_pizza.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Spicy Veggie pizza.<br><br>Ingredients👉<br>⚫ Ketchup Layer<br>⚫ Mushrooms, Tomatoes, Onions<br>⚫ Black olives and bell peppers<br>⚫ Mozzarella Cheese layers 2x.<br><br>Total Price = LKR.2300.00"
+    );
+  } else if (input.toLowerCase().includes("hot & spicy")) {
+    return (
+      "<img src='pizzas/h_pizza.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Hot & Spicy pizza.<br><br>Ingredients👉<br>⚫ Ketchup Layer<br>⚫ Spicy chunks of chicken<br>⚫ Capsicums and Onions<br>⚫ Mozzarella Cheese layers 2x.<br><br>Total Price = LKR.1950.00"
     );
   }
 }
