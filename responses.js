@@ -35,7 +35,7 @@ function getBotResponse(input) {
     return (
       "<img src='asset/mglogo.jpg' alt='' width='250' height='250'<br><br>Hello " +
       userName +
-      ", Welcome to the Brew Cafe<br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffee<br><br>3.Pizza"
+      ", Welcome to the Brew Cafe<br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza"
     );
 
     // -----------------burgers-------------------//
@@ -79,11 +79,41 @@ function getBotResponse(input) {
   }
   //-------------------Coffee------------------------//
   //-------------------Menu--------------------------//
-  else if (input.toLowerCase().includes("coffee")) {
+  else if (input.toLowerCase().includes("coffees")) {
     return (
       "<img src='asset/c_banner.jpg' alt='' width='426' height='240'<br><br>Dear " +
       userName +
-      ", We have various kinds of coffee. If you want to know more details, please mention the each coffee name.<br><br>1.Cheese Burger<br><br>2.Crispy Chicken Burger<br><br>3.Vegetable Burger<br><br>4.Hamburger<br><br>5.Sandwich Burger"
+      ", We have various kinds of coffees. If you want to know more details, please mention the each coffee name.<br><br>1.Espresso<br><br>2.Cappuccino<br><br>3.Frappuccino<br><br>4.Iced Coffee<br><br>5.Black Coffee"
+    );
+    // -----------------espresso-------------------
+  } else if (input.toLowerCase().includes("espresso")) {
+    return (
+      "<img src='coffees/ex_coffee.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Espresso Coffee.<br><br>Ingredients👉<br>⚫ Finely ground coffee beans<br>⚫ hot water<br><br>Total Price = LKR.250.00"
+    );
+    // -----------------cappuccino-------------------
+  } else if (input.toLowerCase().includes("cappuccino")) {
+    return (
+      "<img src='coffees/c_coffee.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Cappuccino Coffee.<br><br>Ingredients👉<br>⚫ Espresso shots<br>⚫ Steamed milk<br>⚫ Milk foam<br><br>Total Price = LKR.450.00"
+    );
+    // -----------------frappuccino-------------------
+  } else if (input.toLowerCase().includes("frappuccino")) {
+    return (
+      "<img src='coffees/f_coffee.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Frappuccino Coffee.<br><br>Ingredients👉<br>⚫ Espresso shots<br>⚫ Milk<br>⚫ Ice cubes<br>⚫ Chocolate + Vanila cream<br>⚫ Whipped cream<br>⚫ Caramel + Sweets<br><br>Total Price = LKR.850.00"
+    );
+    // -----------------black-------------------
+  } else if (input.toLowerCase().includes("black coffee")) {
+    return (
+      "<img src='coffees/b_coffee.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Black Coffee.<br><br>Ingredients👉<br>⚫ Brewing ground coffee beans<br>⚫ Hot water<br><br>Total Price = LKR.150.00"
+    );
+    // -----------------iced-------------------
+  } else if (input.toLowerCase().includes("iced coffee")) {
+    return (
+      "<img src='coffees/i_coffee.jpg' alt='' width='300' height='300'<br><br>" +
+      "Here, This is our Iced Coffee.<br><br>Ingredients👉<br>⚫ Chilled coffee<br>⚫ Chocolate milk<br>⚫ Ice cubes<br><br>Total Price = LKR.300.00"
     );
   }
 }
