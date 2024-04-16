@@ -257,6 +257,6 @@ function getBotResponse(input) {
     //else part//
   } else {
     playSound(audioFiles.greeting);
-    return "I can't response that 😢. Plese mention only things related to our menu.";
+    return `I can't respond to that 😢. Please mention only things related to our menu.<br><br><button class = "menuBtn" onclick="handleMenuClick()">Menu</button>`;
   }
 }
