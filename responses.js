@@ -2,7 +2,7 @@ let userName = "";
 
 // Define audio files
 const audioFiles = {
-  greeting: "greeting.mp3",
+  greeting: "asset/greeting.mp3",
 };
 
 function playSound(soundFile) {
@@ -43,7 +43,7 @@ function getBotResponse(input) {
     return (
       "Hello " +
       userName +
-      ", Welcome to the Brew Cafe...😊. How can I help you today?"
+      ", Welcome to the <b>Brew Cafe...</b>😊. How can I help you today?"
     );
     //click heart button
   } else if (input == "❤️") {
