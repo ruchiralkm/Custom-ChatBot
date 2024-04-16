@@ -206,3 +206,18 @@ body {
     border-radius: 0px;
   }
 }
+
+/* menu button */
+.menuBtn {
+  background-color: #0d7eff;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.menuBtn:hover {
+  background-color: #0056b9;
+}
