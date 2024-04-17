@@ -38,8 +38,11 @@ function getBotResponse(input) {
   const OkInt = ["ok", "cool", "yes", "like", "yep", "good"];
   const OkResponses = ["Cool😎", "Ok dear👍", "Good dear👍"];
 
+  // menu equal names
+  const menus = ["menu", "food", "drink"];
+
   //City Names
-  const cityNames = ["kandy", "kegalle"];
+  const cityNames = ["kandy", "kegalle", "colombo", "kurunegala", "matale"];
   // Simple responses
   // enter user's name
   if (!userName) {
@@ -74,6 +77,21 @@ function getBotResponse(input) {
     // -----------------Food-------------------//
     // -----------------Main Menu-------------------//
   } else if (input.toLowerCase().includes("menu")) {
+    playSound(audioFiles.greeting);
+    return (
+      "<img src='asset/mglogo.jpg' alt='' width='250' height='250'<br><br>Hello " +
+      userName +
+      ", Welcome to the Brew Cafe<br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza<br><br>4.Desserts"
+    );
+    // -----------------menu equal names (food,drink)-------------------//
+  } else if (input.toLowerCase().includes("food")) {
+    playSound(audioFiles.greeting);
+    return (
+      "<img src='asset/mglogo.jpg' alt='' width='250' height='250'<br><br>Hello " +
+      userName +
+      ", Welcome to the Brew Cafe<br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza<br><br>4.Desserts"
+    );
+  } else if (input.toLowerCase().includes("drink")) {
     playSound(audioFiles.greeting);
     return (
       "<img src='asset/mglogo.jpg' alt='' width='250' height='250'<br><br>Hello " +
@@ -261,20 +279,44 @@ function getBotResponse(input) {
 
     //-------------------------------------//
 
-    //delivery
-  } else if (input.toLowerCase().includes("delivery")) {
+    // social medias
+  } else if (input.toLowerCase().includes("social media")) {
+    playSound(audioFiles.greeting);
+    return (
+      'Here, These are our social media. You can follow us and get updates<br><br><button class = "fa fa-facebook-square" style="color: blue; cursor: pointer; border: none; background: transparent; font-size: 30px; "></button>' +
+      '<button class = "fa fa-instagram" style="color: purple; cursor: pointer; border: none; background: transparent; font-size: 30px; "></button>' +
+      '<button class = "fa fa-whatsapp" style="color: green; cursor: pointer; border: none; background: transparent; font-size: 30px; "></button>'
+    );
+  }
+  //delivery
+  else if (input.toLowerCase().includes("delivery")) {
     Adrs = "";
     adrState = true;
     playSound(audioFiles.greeting);
-    return "give address";
+    return "Plese give me your address. I will check it.";
   } else if (!Adrs && adrState) {
     Adrs = input;
     if (cityNames.includes(Adrs.toLowerCase())) {
       playSound(audioFiles.greeting);
-      return "Yes can...😊";
+      return (
+        "Yes " + userName + "😊, We can delivery to " + "<b>" + Adrs + "</b>"
+      );
     }
     playSound(audioFiles.greeting);
-    return "No cant...";
+    return (
+      "No " +
+      userName +
+      "😢, We can not delivery to " +
+      "<b>" +
+      Adrs +
+      "</b>, because that city is out of the country..."
+    );
+  }
+
+  //---------------- Good bye -----------------//
+  else if (input.toLowerCase().includes("bye")) {
+    playSound(audioFiles.greeting);
+    return "Goodbye " + userName + "👋, Have a nice day 💕";
   }
 
   //----------------------------------------------//
