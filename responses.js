@@ -1,6 +1,7 @@
 let userName = "";
 
 let Adrs = "";
+let adrState = false;
 
 // Define audio files
 const audioFiles = {
@@ -48,7 +49,7 @@ function getBotResponse(input) {
       ", Welcome to the <b>Brew Cafe...</b>😊. How can I help you today?"
     );
     //click heart button
-  } else if (input == "❤️") {
+  } else if (input == "❤") {
     playSound(audioFiles.greeting);
     return "<img src='asset/heart2.gif' alt='' width='50' height='50'>";
     //hello, hi
@@ -261,16 +262,13 @@ function getBotResponse(input) {
     //delivery
   } else if (input.toLowerCase().includes("delivery")) {
     Adrs = "";
-    playSound(audioFiles.greeting);
+    adrState = true;
     return "give address";
-  } else if (!Adrs) {
+  } else if (!Adrs && adrState) {
     Adrs = input;
     if (Adrs.toLowerCase().includes("kandy")) {
-      playSound(audioFiles.greeting);
       return "Yes can...😊";
-    } else if (!Adrs.toLowerCase().includes("kandy")) {
     }
-    playSound(audioFiles.greeting);
     return "No cant...";
   }
 
