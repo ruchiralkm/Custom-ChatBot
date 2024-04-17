@@ -1,5 +1,7 @@
 let userName = "";
 
+let Adrs = "";
+
 // Define audio files
 const audioFiles = {
   greeting: "asset/greeting.mp3",
@@ -254,8 +256,27 @@ function getBotResponse(input) {
       "Here, This is our Six Cups Dessert.<br><br>Ingredients👉<br>⚫ Strawberry ice cream<br>⚫ Fruit & Nut ice cream<br>⚫ Caramel + Sweets<br><br>Total Price = LKR.750.00"
     );
 
-    //else part//
-  } else {
+    //-------------------------------------//
+
+    //delivery
+  } else if (input.toLowerCase().includes("delivery")) {
+    Adrs = "";
+    playSound(audioFiles.greeting);
+    return "give address";
+  } else if (!Adrs) {
+    Adrs = input;
+    if (Adrs.toLowerCase().includes("kandy")) {
+      playSound(audioFiles.greeting);
+      return "Yes can...😊";
+    } else if (!Adrs.toLowerCase().includes("kandy")) {
+    }
+    playSound(audioFiles.greeting);
+    return "No cant...";
+  }
+
+  //----------------------------------------------//
+  //else part//
+  else {
     playSound(audioFiles.greeting);
     return `I can't respond to that 😢. Please mention only things related to our menu.<br><br><button class = "menuBtn" onclick="handleMenuClick()">Menu</button>`;
   }
