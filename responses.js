@@ -1,7 +1,14 @@
+// user name
 let userName = "";
 
+// delivery
 let Adrs = "";
 let adrState = false;
+
+//Feedback
+let feed = "";
+let feedx = false;
+const rates = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
 // Define audio files
 const audioFiles = {
@@ -29,7 +36,7 @@ function getBotResponse(input) {
     "hello hi eva",
   ];
   const responses = [
-    "Whatsup bro<br><img src='asset/emote.gif' alt='' width='50' height='50'>",
+    "Whatsup dear<br><img src='asset/emote.gif' alt='' width='50' height='50'>",
     "Hello dear<br><img src='asset/emote.gif' alt='' width='50' height='50'>",
     "Hello, Nice to meet you...<br><img src='asset/emote.gif' alt='' width='50' height='50'>",
   ];
@@ -38,11 +45,33 @@ function getBotResponse(input) {
   const OkInt = ["ok", "cool", "yes", "like", "yep", "good"];
   const OkResponses = ["Cool😎", "Ok dear👍", "Good dear👍"];
 
-  // menu equal names
-  const menus = ["menu", "food", "drink"];
-
   //City Names
-  const cityNames = ["kandy", "kegalle", "colombo", "kurunegala", "matale"];
+  const cityNames = [
+    "colombo",
+    "gampaha",
+    "kalutara",
+    "kandy",
+    "matale",
+    "nuwara eliya",
+    "galle",
+    "hambantota",
+    "jaffna",
+    "kilinochchi",
+    "mannar",
+    "mullaitivu",
+    "vavuniya",
+    "puttalam",
+    "kurunegala",
+    "anuradhapura",
+    "polonnaruwa",
+    "badulla",
+    "monaragala",
+    "ratnapura",
+    "kegalle",
+    "ampara",
+    "batticaloa",
+    "trincomalee",
+  ];
   // Simple responses
   // enter user's name
   if (!userName) {
@@ -81,7 +110,7 @@ function getBotResponse(input) {
     return (
       "<img src='asset/mglogo.jpg' alt='' width='250' height='250'<br><br>Hello " +
       userName +
-      ", Welcome to the Brew Cafe<br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza<br><br>4.Desserts"
+      ", Welcome to the <b>Brew Cafe.🍷</b><br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza<br><br>4.Desserts"
     );
     // -----------------menu equal names (food,drink)-------------------//
   } else if (input.toLowerCase().includes("food")) {
@@ -89,14 +118,14 @@ function getBotResponse(input) {
     return (
       "<img src='asset/mglogo.jpg' alt='' width='250' height='250'<br><br>Hello " +
       userName +
-      ", Welcome to the Brew Cafe<br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza<br><br>4.Desserts"
+      ", Welcome to the <b>Brew Cafe.🍷</b><br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza<br><br>4.Desserts"
     );
   } else if (input.toLowerCase().includes("drink")) {
     playSound(audioFiles.greeting);
     return (
       "<img src='asset/mglogo.jpg' alt='' width='250' height='250'<br><br>Hello " +
       userName +
-      ", Welcome to the Brew Cafe<br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza<br><br>4.Desserts"
+      ", Welcome to the <b>Brew Cafe.🍷</b><br>This is our menu. If you want know more details, Please mention food name.<br><br>1.Burgers<br><br>2.Coffees<br><br>3.Pizza<br><br>4.Desserts"
     );
 
     // -----------------burgers-------------------//
@@ -106,7 +135,7 @@ function getBotResponse(input) {
     return (
       "<img src='asset/b_banner.jpg' alt='' width='426' height='240'<br><br>Dear " +
       userName +
-      ", We have various kinds of burgers. If you want to know more details, please mention the each burger name.<br><br>1.Cheese Burger<br><br>2.Crispy Chicken Burger<br><br>3.Vegetable Burger<br><br>4.Hamburger<br><br>5.Sandwich Burger"
+      ", We have various kinds of burgers🍔. If you want to know more details, please mention the each burger name.<br><br>1.Cheese Burger<br><br>2.Crispy Chicken Burger<br><br>3.Vegetable Burger<br><br>4.Hamburger<br><br>5.Sandwich Burger"
     );
     // -----------------cheese burgers-------------------
   } else if (input.toLowerCase().includes("cheese burger")) {
@@ -151,7 +180,7 @@ function getBotResponse(input) {
     return (
       "<img src='asset/c_banner.jpg' alt='' width='426' height='240'<br><br>Dear " +
       userName +
-      ", We have various kinds of coffees. If you want to know more details, please mention the each coffee name.<br><br>1.Espresso<br><br>2.Cappuccino<br><br>3.Frappuccino<br><br>4.Iced Coffee<br><br>5.Black Coffee"
+      ", We have various kinds of coffees☕. If you want to know more details, please mention the each coffee name.<br><br>1.Espresso<br><br>2.Cappuccino<br><br>3.Frappuccino<br><br>4.Iced Coffee<br><br>5.Black Coffee"
     );
     // -----------------espresso-------------------
   } else if (input.toLowerCase().includes("espresso")) {
@@ -195,7 +224,7 @@ function getBotResponse(input) {
     return (
       "<img src='asset/p_banner.jpg' alt='' width='426' height='240'<br><br>Dear " +
       userName +
-      ", We have various kinds of pizzas. If you want to know more details, please mention the each pizza name.<br><br>1.Cheese Lover<br><br>2.Sausage Delight<br><br>3.Double Chicken<br><br>4.Spicy Veggie<br><br>5.Hot & Spicy"
+      ", We have various kinds of pizzas🍕. If you want to know more details, please mention the each pizza name.<br><br>1.Cheese Lover<br><br>2.Sausage Delight<br><br>3.Double Chicken<br><br>4.Spicy Veggie<br><br>5.Hot & Spicy"
     );
     // -----------------cheese lover-------------------
   } else if (input.toLowerCase().includes("cheese lover")) {
@@ -239,7 +268,7 @@ function getBotResponse(input) {
     return (
       "<img src='asset/d_banner.jpg' alt='' width='426' height='240'<br><br>Dear " +
       userName +
-      ", We have various kinds of desserts. If you want to know more details, please mention the each desserts name.<br><br>1.Chocolate Lava<br><br>2.Choco Cup<br><br>3.Bliss Berry<br><br>4.Strawberry Mousse<br><br>5.Six Cups"
+      ", We have various kinds of desserts🍨. If you want to know more details, please mention the each desserts name.<br><br>1.Chocolate Lava<br><br>2.Choco Cup<br><br>3.Bliss Berry<br><br>4.Strawberry Mousse<br><br>5.Six Cups"
     );
     // -----------------chocolate lava-------------------
   } else if (input.toLowerCase().includes("chocolate lava")) {
@@ -283,17 +312,17 @@ function getBotResponse(input) {
   } else if (input.toLowerCase().includes("social media")) {
     playSound(audioFiles.greeting);
     return (
-      'Here, These are our social media. You can follow us and get updates<br><br><button class = "fa fa-facebook-square" style="color: blue; cursor: pointer; border: none; background: transparent; font-size: 30px; "></button>' +
+      'Here, These are our social medias📱. You can follow us and get updates<br><br><button class = "fa fa-facebook-square" style="color: blue; cursor: pointer; border: none; background: transparent; font-size: 30px; "></button>' +
       '<button class = "fa fa-instagram" style="color: purple; cursor: pointer; border: none; background: transparent; font-size: 30px; "></button>' +
       '<button class = "fa fa-whatsapp" style="color: green; cursor: pointer; border: none; background: transparent; font-size: 30px; "></button>'
     );
   }
-  //delivery
+  //----------------delivery--------------
   else if (input.toLowerCase().includes("delivery")) {
     Adrs = "";
     adrState = true;
     playSound(audioFiles.greeting);
-    return "Plese give me your address. I will check it.";
+    return "Plese give me your address📍. I will check it.";
   } else if (!Adrs && adrState) {
     Adrs = input;
     if (cityNames.includes(Adrs.toLowerCase())) {
@@ -304,12 +333,45 @@ function getBotResponse(input) {
     }
     playSound(audioFiles.greeting);
     return (
-      "No " +
+      "Sorry " +
       userName +
       "😢, We can not delivery to " +
       "<b>" +
       Adrs +
-      "</b>, because that city is out of the country..."
+      "</b>, because that city is out of the range..."
+    );
+  }
+
+  //----------------Feedback--------------
+  else if (input.toLowerCase().includes("like")) {
+    feed = "";
+    feedx = true;
+    playSound(audioFiles.greeting);
+    return (
+      "Thanks " +
+      userName +
+      "😊, Can you please provide feedback on a scale of 0-10.<br>⭐⭐⭐⭐⭐"
+    );
+  } else if (!feed && feedx) {
+    feed = input;
+    if (rates.includes(feed.toLowerCase())) {
+      playSound(audioFiles.greeting);
+      return (
+        "Thanks " +
+        userName +
+        " for your feedback!😊. We appreciate your rating of <b>" +
+        feed +
+        " out of 10</b> 💕"
+      );
+    }
+    playSound(audioFiles.greeting);
+    return (
+      "Sorry " +
+      userName +
+      "😢, That's not valid feedback " +
+      "<b>" +
+      feed +
+      "</b> It is unable to understand."
     );
   }
 
