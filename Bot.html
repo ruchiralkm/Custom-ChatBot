@@ -7,7 +7,7 @@
     <title>Chat Bot</title>
 
     <!-- css file -->
-    <link rel="stylesheet" href="bot.css" />
+    <link rel="stylesheet" href="bots.css" />
     <link rel="stylesheet" href="styl.css" />
 
     <!-- icons link -->
@@ -24,7 +24,7 @@
       <div class="cnt">
         <h1>Welcome to the <span>Brew Cafe</span></h1>
         <p>
-          Welcome to our cozy café! Enjoy our delicious, juicy burgers made from
+          Welcome to our Brew Cafe! Enjoy our delicious, juicy burgers made from
           fresh ingredients and cooked to perfect. Pair it with our tasty,
           smoothly brewed coffee. Don't forget to try our other delicious food
           and drink options, all made with love and care. Come have a delightful
@@ -38,7 +38,7 @@
     <div class="chat-bar-collapsible">
       <button id="chat-button" type="button" class="collapsible">
         <center>
-          AI ChatBot (beta)
+          Chat with Us
           <i
             id="chat-icon"
             style="color: #fff"
@@ -74,21 +74,13 @@
                 </div>
 
                 <div class="chat-bar-icons">
-                  <!-- refresh button -->
+                  <!-- menu button -->
                   <i
-                    id="clear"
-                    style="color: rgb(1, 35, 122); cursor: pointer"
-                    class="fa fa-refresh"
+                    id="chat-icon"
+                    style="color: rgb(0, 110, 174); cursor: pointer"
+                    class="fa fa-cutlery"
+                    onclick="menuBtn()"
                   ></i>
-
-                  <script>
-                    document
-                      .getElementById("clear")
-                      .addEventListener("click", function () {
-                        // Reload the page
-                        window.location.reload();
-                      });
-                  </script>
 
                   <!-- heart button -->
                   <i
