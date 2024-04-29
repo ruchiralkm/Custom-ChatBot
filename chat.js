@@ -34,7 +34,8 @@ function getTime() {
 
 // Gets the first message
 function firstBotMessage() {
-  let firstMessage = "How can I help you today...?🤖";
+  let firstMessage =
+    "<img src='asset/eva.gif' alt='' width='170' height='170'<br><br>Hello, I am <b>EVA.</b> How can I help you today?";
   document.getElementById("botStarterMessage").innerHTML =
     '<p class="botText"><span>' + firstMessage + "</span></p>";
 
@@ -95,6 +96,15 @@ function sendButton() {
 function heartButton() {
   buttonSendText("❤️");
 }
+
+function menuBtn() {
+  buttonSendText("menu");
+}
+
+//------------- else message button
+// function handleMenuClick() {
+//   buttonSendText("menu");
+// }
 
 // Press enter to send a message
 $("#textInput").keypress(function (e) {
