@@ -442,7 +442,7 @@ function getBotResponse(input) {
       un2 = "";
       unrun = true;
       playSound(audioFiles.greeting);
-      return "I can't understand it's mean 😢. Pleade teach me";
+      return "I can't understand it's mean 😢. Please teach me";
     } else if (!un2) {
       if (input.toLowerCase().startsWith("it is mean")) {
         un2 = input.slice(11);
@@ -461,7 +461,7 @@ function getBotResponse(input) {
       un2 = "";
       unrun = true;
       playSound(audioFiles.greeting);
-      return "I can't understand it's mean 😢. Pleade teach me";
+      return "I can't understand it's mean 😢. Please teach me";
     }
   }
 }
