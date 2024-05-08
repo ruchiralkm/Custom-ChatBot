@@ -112,3 +112,26 @@ $("#textInput").keypress(function (e) {
     getResponse();
   }
 });
+
+// Function to handle speech recognition
+function startSpeechRecognition() {
+  const recognition = new webkitSpeechRecognition(); // Create speech recognition object
+  recognition.lang = 'en-US'; // Set language to English (you can change it as per your requirement)
+  
+  // Start speech recognition
+  recognition.start();
+  
+  // Event listener for when speech is recognized
+  recognition.onresult = function(event) {
+      const result = event.results[0][0].transcript; // Get the recognized text
+      document.getElementById('textInput').value = result; // Display the text in the input field
+  };
+  
+  // Event listener for errors
+  recognition.onerror = function(event) {
+      console.error('Speech recognition error:', event.error);
+  };
+}
+
+// Add event listener to the button to start recording
+document.getElementById('startRecord').addEventListener('click', startSpeechRecognition);
