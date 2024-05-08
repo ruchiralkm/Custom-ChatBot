@@ -126,8 +126,8 @@ function getBotResponse(input) {
     }
 
     // User Enter His name directly
-  } else if (input.toLowerCase().startsWith("i am")) {
-    userName = input.slice(5);
+  } else if (input.toLowerCase().startsWith("my name")) {
+    userName = input.slice(8);
     playSound(audioFiles.greeting);
     return (
       "Hello " +
@@ -371,7 +371,7 @@ function getBotResponse(input) {
     );
   }
   //----------------delivery--------------
-  else if (input.toLowerCase().includes("delivery")) {
+  else if (input.toLowerCase().includes("deliver")) {
     Adrs = "";
     adrState = true;
     playSound(audioFiles.greeting);
