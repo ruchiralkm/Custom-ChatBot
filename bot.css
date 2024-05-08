@@ -31,7 +31,7 @@ body {
 .collapsible {
   /* background-color: #003067; */
 
-  background: url(/asset/anim2.gif);
+  background: url(asset/anim2.gif);
   background-size: cover;
   background-position: center;
 
@@ -53,12 +53,12 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+  background-color: #c55353;
 }
 
 .full-chat-block {
   width: 550px; /*----width-----*/
-  background: white;
+  background: url(asset/bg1.jpg); /*chat background*/
   text-align: center;
   overflow: auto;
   scrollbar-width: none;
@@ -173,7 +173,7 @@ body {
 .botText span {
   line-height: 1.5em;
   display: inline-block;
-  background: #d2d2d2;
+  background: #fff7f7;
   padding: 10px;
   border-radius: 8px;
   border-bottom-left-radius: 2px;
