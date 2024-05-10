@@ -17,6 +17,9 @@ let un1 = "";
 let un2 = "";
 let unrun = false;
 
+//Change theme
+let currentTheme = 1; // Keep track of the current theme
+
 // Define audio files
 const audioFiles = {
   greeting: "asset/greeting.mp3",
@@ -47,9 +50,6 @@ function getBotResponse(input) {
     "Hello dear...😉",
     "Hello, Nice to meet you...😉",
   ];
-
-  //user enter the what is your name
-  const naming = ["what is your name", "name", "your name"];
 
   // if user input ok
   const OkInt = ["ok", "cool", "yes", "like", "yep", "good"];
@@ -85,7 +85,7 @@ function getBotResponse(input) {
   // Simple responses
   // enter user's name
 
-  if (naming.includes(input.toLowerCase())) {
+  if (input.toLowerCase().includes("name")) {
     userName = "";
     nameState = true;
     playSound(audioFiles.greeting);
@@ -139,6 +139,14 @@ function getBotResponse(input) {
   else if (input == "❤️") {
     playSound(audioFiles.greeting);
     return "<img src='asset/heart2.gif' alt='' width='50' height='50'>";
+  //Change the Themes  
+  }else if (input.toLowerCase().includes("change theme")) {
+    currentTheme++;
+    if (currentTheme > 3)
+    currentTheme = 1;
+    document.querySelector(".full-chat-block").style.background = `url(asset/bg${currentTheme}.jpg)`;
+    playSound(audioFiles.greeting);
+    return `Theme changed to Theme ${currentTheme}`;
     //hello, hi
   } else if (greetings.includes(input.toLowerCase())) {
     playSound(audioFiles.greeting);
