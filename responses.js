@@ -513,17 +513,15 @@ function getBotResponse(input) {
         "Thanks " +
         userName + " for your feedback!😥. We appreciate your rating of <b>" + feed + " out of 10</b> 💕<br>"+ "⭐".repeat(feed)
       );
+    }else{
+      playSound(audioFiles.greeting);
+      emotionImg.src = "emotions/confuesd.png";
+      return (
+        "Sorry " +
+        userName + "😢, That's not valid feedback " + "<b>" + feed + "</b> It is unable to understand."
+      );
     }
-    playSound(audioFiles.greeting);
-    emotionImg.src = "emotions/confuesd.png";
-    return (
-      "Sorry " +
-      userName +
-      "😢, That's not valid feedback " +
-      "<b>" +
-      feed +
-      "</b> It is unable to understand."
-    );
+    
   }
 
   //---------------- Good bye -----------------//
