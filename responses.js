@@ -493,7 +493,7 @@ function getBotResponse(input) {
       emotionImg.src = "emotions/happy.png";
       return (
         "Thanks " +
-        userName + " for your feedback!😊. We appreciate your rating of <b>" + feed + " out of 10</b> 💕"
+        userName + " for your feedback!😊. We appreciate your rating of <b>" + feed + " out of 10</b> 💕<br>"+ "⭐".repeat(feed)
       );
     }
     //Medium Rates
@@ -502,7 +502,7 @@ function getBotResponse(input) {
       emotionImg.src = "emotions/confuesd.png";
       return (
         "Thanks " +
-        userName + " for your feedback!😒. We appreciate your rating of <b>" + feed + " out of 10</b> 💕"
+        userName + " for your feedback!😒. We appreciate your rating of <b>" + feed + " out of 10</b> 💕<br>"+ "⭐".repeat(feed)
       );
     }
     //Bad Rates
@@ -511,7 +511,7 @@ function getBotResponse(input) {
       emotionImg.src = "emotions/sad.png";
       return (
         "Thanks " +
-        userName + " for your feedback!😥. We appreciate your rating of <b>" + feed + " out of 10</b> 💕"
+        userName + " for your feedback!😥. We appreciate your rating of <b>" + feed + " out of 10</b> 💕<br>"+ "⭐".repeat(feed)
       );
     }
     playSound(audioFiles.greeting);
