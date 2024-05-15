@@ -38,6 +38,7 @@ body {
   color: white;
   cursor: pointer;
   padding: 18px;
+  margin-left: 54px;
   width: 550px; /*----width-----*/
   text-align: left;
   outline: none;
@@ -50,10 +51,11 @@ body {
 
 /*--------------------------------- hidden ---------------------*/
 .content {
+  padding-left: 54px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #c55353;
+  background-color: none; /* #c55353; */
 }
 
 .full-chat-block {
