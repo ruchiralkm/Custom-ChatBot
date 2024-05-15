@@ -464,6 +464,7 @@ function getBotResponse(input) {
   }
 
   //----------------Feedback--------------
+  //----------------Like--------------
   else if (input.toLowerCase().includes("like")) {
     feed = "";
     feedx = true;
@@ -473,6 +474,17 @@ function getBotResponse(input) {
       userName +
       "😊, Can you please provide feedback on a scale of 0-10.<br>⭐⭐⭐⭐⭐"
     );
+    //----------------rate--------------
+  }else if (input.toLowerCase().includes("rate")) {
+    feed = "";
+    feedx = true;
+    playSound(audioFiles.greeting);
+    return (
+      "Thanks " +
+      userName +
+      "😊, Can you please provide feedback on a scale of 0-10.<br>⭐⭐⭐⭐⭐"
+    );
+    
   } else if (!feed && feedx) {
     feed = input;
     //Good Rates
