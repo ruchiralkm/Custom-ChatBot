@@ -112,7 +112,7 @@ $("#textInput").keypress(function (e) {
 // Function to handle speech recognition
 function startSpeechRecognition() {
   const recognition = new webkitSpeechRecognition(); // Create speech recognition object
-  recognition.lang = 'en-US'; // Set language to English (you can change it as per your requirement)
+  recognition.lang = 'en-UK'; // Set language to English (you can change it as per your requirement)
   
   // Start speech recognition
   recognition.start();
