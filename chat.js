@@ -34,8 +34,14 @@ function getTime() {
 
 // Gets the first message
 function firstBotMessage() {
-  let firstMessage =
-    "<img src='asset/eva.gif' alt='' width='170' height='170'<br><br>Hello, I am <b>EVA.</b> How can I help you today?";
+  let firstMessage = `
+    <video width="200px" height="200px" autoplay muted loop>
+        <source src="eva.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <br><br>
+    Hello, I am <b>EVA.</b> How can I help you today?
+`;
   document.getElementById("botStarterMessage").innerHTML =
     '<p class="botText"><span>' + firstMessage + "</span></p>";
 
