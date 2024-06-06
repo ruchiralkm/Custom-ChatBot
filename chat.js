@@ -1,4 +1,3 @@
-// Collapsible
 var coll = document.getElementsByClassName("collapsible");
 
 for (let i = 0; i < coll.length; i++) {
@@ -34,14 +33,10 @@ function getTime() {
 
 // Gets the first message
 function firstBotMessage() {
-  let firstMessage = `
-    <video width="200px" height="200px" autoplay muted loop>
-        <source src="eva.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <br><br>
-    Hello, I am <b>EVA.</b> How can I help you today?
-`;
+  let firstMessage = `<img src='asset/waving.gif' alt='' width='100' height='100'>
+                      <img src='emotions/normal.png' alt='' width='120' height='120'>
+                      <br><br>Hello, I am <b>EVA.</b> How can I help you today?`;
+
   document.getElementById("botStarterMessage").innerHTML =
     '<p class="botText"><span>' + firstMessage + "</span></p>";
 
@@ -62,7 +57,7 @@ function getHardResponse(userText) {
   document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
 
-//Gets the text text from the input box and processes it
+//Gets the text from the input box, processes it and output
 function getResponse() {
   let userText = $("#textInput").val();
 
@@ -103,11 +98,6 @@ function menuBtn() {
   buttonSendText("menu");
 }
 
-//------------- else message button
-// function handleMenuClick() {
-//   buttonSendText("menu");
-// }
-
 // Press enter to send a message
 $("#textInput").keypress(function (e) {
   if (e.which == 13) {
@@ -115,10 +105,12 @@ $("#textInput").keypress(function (e) {
   }
 });
 
+
+//************VOICE COMMAND*****************/
 // Function to handle speech recognition
 function startSpeechRecognition() {
   const recognition = new webkitSpeechRecognition(); // Create speech recognition object
-  recognition.lang = 'en-UK'; // Set language to English (you can change it as per your requirement)
+  recognition.lang = 'en-UK';
   
   // Start speech recognition
   recognition.start();
@@ -137,3 +129,4 @@ function startSpeechRecognition() {
 
 // Add event listener to the button to start recording
 document.getElementById('startRecord').addEventListener('click', startSpeechRecognition);
+
