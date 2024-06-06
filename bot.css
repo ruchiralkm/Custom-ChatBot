@@ -6,16 +6,7 @@ html {
 }
 
 body {
-  /* min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url(bg3.jpg);
-  background-size: cover;
-  background-position: center; */
-
   margin: 0 auto;
-  /* background-color: #222; */
   font-family: "Poppins", sans-serif;
 }
 
@@ -29,8 +20,6 @@ body {
 }
 
 .collapsible {
-  /* background-color: #003067; */
-
   background: url(asset/anim2.gif);
   background-size: cover;
   background-position: center;
@@ -101,10 +90,6 @@ body {
   background-color: #d2d2d2;
   border-radius: 10px 10px 0px 0px;
   padding: 10px 0px 10px 10px;
-
-  /* background: url(header.jpg);
-  background-size: cover;
-  background-position: center; */
 }
 
 .chat-bar-icons {
