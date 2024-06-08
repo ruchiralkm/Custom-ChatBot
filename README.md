@@ -1,6 +1,6 @@
 # Custom-ChatBot
 <br>
-<center><img src = "https://github.com/ruchiralkm/Custom-ChatBot/blob/main/emotions/happy2.png?raw=true" style="width:400px; height:400px;"></center>
+<center><img src = "https://github.com/ruchiralkm/Custom-ChatBot/blob/main/emotions/happy2.png?raw=true" style="width:200px; height:200px;"></center>
 <br><br>
 This is a chatbot that name is EVA. EVA chatbot created for 'Brew Cafe'. It uses HTML, CSS, Bootstrap, and JavaScript to provide a seamless experience. EVA helps customers with menu options, order placements, and answers queries, enhancing the overall cafe experience.
 
