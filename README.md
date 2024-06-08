@@ -15,8 +15,9 @@ You can enter the various types of commands.
 - Can you delivery it
 - I like this
 - Goodbye
-- Enter unknown questions and put answers.
+- Enter unknown questions and put answers
 - Upcoming foods
 - Change theme
+- Enter Voice input using 🔉button
 
 
