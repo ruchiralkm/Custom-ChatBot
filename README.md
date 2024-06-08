@@ -13,5 +13,9 @@ You can enter the various types of commands.
 - I like this
 - Goodbye
 - Enter unknown questions and put answers.
-- upcoming foods
-- change theme
+- Upcoming foods
+- Change theme
+
+<img src = "https://github.com/ruchiralkm/Custom-ChatBot/blob/main/emotions/happy2.png?raw=true">
+
+
