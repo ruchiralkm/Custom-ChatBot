@@ -16,6 +16,6 @@ You can enter the various types of commands.
 - Upcoming foods
 - Change theme
 
-<img src = "https://github.com/ruchiralkm/Custom-ChatBot/blob/main/emotions/happy2.png?raw=true">
+<img src = "https://github.com/ruchiralkm/Custom-ChatBot/blob/main/emotions/happy2.png?raw=true" style="width:100px; height:100px;">
 
 
