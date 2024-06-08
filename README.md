@@ -6,7 +6,7 @@ This is a chatbot that name is EVA. EVA chatbot created for 'Brew Cafe'. It uses
 
 You can enter the various types of commands.
 
-🛠️Command List
+🛠️Basic Command List
 - Hi/hello/hey/hii...
 - Goodmorning/good afternoon...
 - How are you
